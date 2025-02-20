@@ -1,0 +1,30 @@
+﻿# Build files
+bin/
+obj/
+out/
+*.exe
+*.dll
+*.pdb
+*.log
+
+# IDE files
+.vs/
+.idea/
+.vscode/
+
+# JetBrains Rider
+*.sln.DotSettings.user
+.idea/
+
+# User-specific files
+*.user
+*.suo
+*.db
+.env
+
+# NuGet & Dependency Files
+packages/
+*.nuget
+project.lock.json
+project.assets.json
+*.csproj.user
