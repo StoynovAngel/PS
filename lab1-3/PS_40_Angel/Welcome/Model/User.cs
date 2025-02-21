@@ -5,23 +5,29 @@ namespace Welcome.Model;
 
 public class User
 {
-    private string names;
+    private string name;
     private string password;
-    private UserRolesEnum _userRole;
+    private UserRolesEnum userRole;
     private string email;
     private const int SHIFT_OPERATION = 2;
-
-    public string Name { get; set; }
     
-    public UserRolesEnum UserRole { get; set; }
-
-    public string Email { get; set; }
+    public User(string name, string password, string email, UserRolesEnum userRole = UserRolesEnum.ANONYMOUS)
+    {
+        this.name = name;
+        this.password = encryptPassword(password);
+        this.email = email;
+        this.userRole = userRole;
+    }
 
     public string Password
     {
         get {return decryptPassword();}
         set { password = encryptPassword(value); }
     }
+    
+    public string Name { get { return name; } set { name = value; } }
+    public UserRolesEnum UserRole { get { return userRole; } set { userRole = value; } }
+    public string Email { get { return email; } set { email = value; } }
     
     public override string ToString()
     {
@@ -42,12 +48,10 @@ public class User
     private string decryptPassword()
     {
         char[] chars = password.ToCharArray();
-        Console.WriteLine(new string(chars));
         for (int i = 0; i < chars.Length; i++)
         {
             chars[i] = (char)(chars[i] - SHIFT_OPERATION);
         }
-        Console.WriteLine(new string(chars));
         return new string(chars);
     }
 }

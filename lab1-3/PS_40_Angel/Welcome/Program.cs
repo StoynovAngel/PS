@@ -9,11 +9,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        User user = new User();
-        user.Name = "Angel Stoynov";
-        user.UserRole = UserRolesEnum.INSPECTOR;
-        user.Email = "random@gmail.com";
-        user.Password = "testova2323";
+        User user = new User("Angel Stoynov", "testova2323", "testova@gmail.com");
         UserViewModel userViewModel = new UserViewModel(user);
         UserView userView = new UserView(userViewModel);
         userView.DisplayUserByRole("inspector");

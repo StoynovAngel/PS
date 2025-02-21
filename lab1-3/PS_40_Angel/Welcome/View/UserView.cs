@@ -23,4 +23,15 @@ public class UserView
     {
         Console.WriteLine(viewModel.GetUserDetailsByRole(role));
     }
+
+    public void DisplayError()
+    {
+        throw new Exception("Unexpected error occured.");
+    }
+    
+    public void DisplayError(String errorMessage)
+    {
+        throw new Exception(errorMessage);
+    }
+    
 }
