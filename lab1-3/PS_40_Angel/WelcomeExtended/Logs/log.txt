@@ -1,2 +1,25 @@
 02/21/2025 13:01:34: Exception occured in the user form.
 02/21/2025 13:02:32: Exception occured in the user form.
+02/21/2025 15:09:13: Incorrect name or password, Exception: System.ArgumentException: Value does not fall within the expected range.
+   at WelcomeExtended.Data.UserData.ValidateUser(String name, String password) in C:\Users\Angel\Desktop\Projects - Git\PS\lab1-3\PS_40_Angel\WelcomeExtended\Data\UserData.cs:line 37
+02/21/2025 15:10:20: Incorrect name or password, Exception: System.ArgumentException: Value does not fall within the expected range.
+   at WelcomeExtended.Data.UserData.ValidateUser(String name, String password) in C:\Users\Angel\Desktop\Projects - Git\PS\lab1-3\PS_40_Angel\WelcomeExtended\Data\UserData.cs:line 37
+02/21/2025 15:11:46: Incorrect name or password, Exception: System.ArgumentException: Value does not fall within the expected range.
+   at WelcomeExtended.Data.UserData.ValidateUser(String name, String password) in C:\Users\Angel\Desktop\Projects - Git\PS\lab1-3\PS_40_Angel\WelcomeExtended\Data\UserData.cs:line 37
+02/21/2025 15:39:46: Incorrect name or password, Exception: System.ArgumentException: Value does not fall within the expected range.
+   at WelcomeExtended.Data.UserData.ValidateUser(String name, String password) in C:\Users\Angel\Desktop\Projects - Git\PS\lab1-3\PS_40_Angel\WelcomeExtended\Data\UserData.cs:line 37
+02/21/2025 15:40:48: Incorrect name or password, Exception: System.ArgumentException: Value does not fall within the expected range.
+   at WelcomeExtended.Data.UserData.ValidateUser(String name, String password) in C:\Users\Angel\Desktop\Projects - Git\PS\lab1-3\PS_40_Angel\WelcomeExtended\Data\UserData.cs:line 37
+02/21/2025 15:41:39: Incorrect name or password, Exception: System.ArgumentException: Value does not fall within the expected range.
+   at WelcomeExtended.Data.UserData.ValidateUser(String name, String password) in C:\Users\Angel\Desktop\Projects - Git\PS\lab1-3\PS_40_Angel\WelcomeExtended\Data\UserData.cs:line 37
+02/21/2025 15:42:51: Incorrect name or password, Exception: System.ArgumentException: Value does not fall within the expected range.
+   at WelcomeExtended.Data.UserData.ValidateUser(String name, String password) in C:\Users\Angel\Desktop\Projects - Git\PS\lab1-3\PS_40_Angel\WelcomeExtended\Data\UserData.cs:line 37
+02/21/2025 15:47:16: Incorrect name or password, Exception: System.ArgumentException: Value does not fall within the expected range.
+   at WelcomeExtended.Data.UserData.ValidateUser(String name, String password) in C:\Users\Angel\Desktop\Projects - Git\PS\lab1-3\PS_40_Angel\WelcomeExtended\Data\UserData.cs:line 37
+02/21/2025 15:48:16: Incorrect name or password, Exception: System.ArgumentException: Value does not fall within the expected range.
+   at WelcomeExtended.Data.UserData.ValidateUser(String name, String password) in C:\Users\Angel\Desktop\Projects - Git\PS\lab1-3\PS_40_Angel\WelcomeExtended\Data\UserData.cs:line 37
+02/21/2025 15:49:16: Incorrect name or password, Exception: System.ArgumentException: Value does not fall within the expected range.
+   at WelcomeExtended.Data.UserData.ValidateUser(String name, String password) in C:\Users\Angel\Desktop\Projects - Git\PS\lab1-3\PS_40_Angel\WelcomeExtended\Data\UserData.cs:line 37
+02/21/2025 15:49:55: Incorrect name or password, Exception: System.ArgumentException: Value does not fall within the expected range.
+   at WelcomeExtended.Data.UserData.ValidateUser(String name, String password) in C:\Users\Angel\Desktop\Projects - Git\PS\lab1-3\PS_40_Angel\WelcomeExtended\Data\UserData.cs:line 37
+02/21/2025 15:49:55: ❌ No such user found: 1

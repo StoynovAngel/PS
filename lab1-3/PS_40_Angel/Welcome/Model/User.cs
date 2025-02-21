@@ -5,10 +5,12 @@ namespace Welcome.Model;
 
 public class User
 {
+    private int id;
     private string name;
     private string password;
     private UserRolesEnum userRole;
     private string email;
+    private DateTime expires;
     private const int SHIFT_OPERATION = 2;
     
     public User(string name, string password, string email, UserRolesEnum userRole = UserRolesEnum.ANONYMOUS)
@@ -17,6 +19,7 @@ public class User
         this.password = encryptPassword(password);
         this.email = email;
         this.userRole = userRole;
+        this.expires = DateTime.Now.AddMonths(1);
     }
 
     public string Password
@@ -25,9 +28,12 @@ public class User
         set { password = encryptPassword(value); }
     }
     
+    public int Id { get => id; set => id = value; }
     public string Name { get { return name; } set { name = value; } }
     public UserRolesEnum UserRole { get { return userRole; } set { userRole = value; } }
     public string Email { get { return email; } set { email = value; } }
+    
+    public DateTime Expires { get { return expires; } set { expires = value; } }
     
     public override string ToString()
     {

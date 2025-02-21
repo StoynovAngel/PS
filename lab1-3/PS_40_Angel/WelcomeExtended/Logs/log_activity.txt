@@ -1,0 +1,4 @@
+02/21/2025 15:39:30: Status: Logged successfully. User User: Student, Password: 123, Role: STUDENT, Email: student@gmail.com
+02/21/2025 15:47:16: Status: Logged UNsuccessfully.
+02/21/2025 15:48:16: Status: Logged UNsuccessfully.
+02/21/2025 15:49:55: Status: Logged UNsuccessfully.

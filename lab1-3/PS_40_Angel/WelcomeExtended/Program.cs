@@ -1,6 +1,10 @@
 ﻿using Welcome.Model;
+using Welcome.Others;
 using Welcome.View;
 using Welcome.ViewModel;
+using WelcomeExtended.Auth;
+using WelcomeExtended.Data;
+using WelcomeExtended.Helpers;
 using WelcomeExtended.Loggers;
 using WelcomeExtended.Others;
 
@@ -10,30 +14,17 @@ class Program
 {
     static void Main(string[] args)
     {
-        try
-        {
-            Console.WriteLine(test(3, 0));
-            User user = new User("Angel Stoynov", "testova2323", "testova@gmail.com");
-            var viewModel = new UserViewModel(user);
-            var view = new UserView(viewModel);
-            view.DisplayForm();
 
-        }
-        catch (Exception e)
-        {
-            Logger.LogToFile("Exception occured in the user form.");
-            var log = new ActionOnError(Delegates.Log);
-            log(e.Message);
-        }
-        finally
-        {
-            Console.WriteLine("Executed....");
-        }
+        UserData userData = new UserData();
+        User user = new User("Angel Stoynov", "testova2323", "testova@gmail.com");
+        User student = new User("Student", "123", "student@gmail.com", UserRolesEnum.STUDENT);
+        User teacher = new User("Teacher", "1234", "teacher@gmail.com", UserRolesEnum.PROFESSOR);
+        User admin = new User("Admin", "12345", "admin@gmail.com", UserRolesEnum.ADMIN);
+        userData.AddUser(user);
+        userData.AddUser(student);
+        userData.AddUser(teacher);
+        userData.AddUser(admin);
         
-    }
-    
-    private static int test(int a, int b)
-    {
-        return a / b;
+        Console.WriteLine(Authentication.Login(userData));
     }
 }
