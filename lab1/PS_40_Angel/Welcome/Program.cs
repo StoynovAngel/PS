@@ -13,6 +13,7 @@ class Program
         user.Name = "Angel Stoynov";
         user.UserRole = UserRolesEnum.INSPECTOR;
         user.Email = "random@gmail.com";
+        user.Password = "testova2323";
         UserViewModel userViewModel = new UserViewModel(user);
         UserView userView = new UserView(userViewModel);
         userView.DisplayUserByRole("inspector");

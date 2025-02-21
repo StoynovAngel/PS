@@ -30,6 +30,12 @@ public class UserViewModel
         set { user.Email = value; }
     }
     
+    public string Password
+    {
+        get { return user.Password; }
+        set { user.Password = value; }
+    }
+    
     public User GetUserDetailsByRole(string roleInput)
     {
         if (!userRoleCheck(roleInput))
