@@ -28,4 +28,19 @@ public static class UserHelper
     {
         return userData.getUser(name, password); 
     }
+
+    public static void DisplayAllUsers(this UserData userData)
+    {
+        userData.displayAllUsers();
+    }
+
+    public static void AddUser(this UserData userData)
+    {
+        userData.addUser();
+    }
+
+    public static void DeleteUser(this UserData userData)
+    {
+        userData.deleteUser();
+    }
 }

@@ -23,3 +23,5 @@
 02/21/2025 15:49:55: Incorrect name or password, Exception: System.ArgumentException: Value does not fall within the expected range.
    at WelcomeExtended.Data.UserData.ValidateUser(String name, String password) in C:\Users\Angel\Desktop\Projects - Git\PS\lab1-3\PS_40_Angel\WelcomeExtended\Data\UserData.cs:line 37
 02/21/2025 15:49:55: ❌ No such user found: 1
+02/22/2025 11:40:54: User added User: Asen, Password: 123, Role: STUDENT, Email: asen@abv.bg
+02/22/2025 11:43:58: User Asen deleted.

@@ -12,15 +12,6 @@ public class User
     private string email;
     private DateTime expires;
     private const int SHIFT_OPERATION = 2;
-    
-    public User(string name, string password, string email, UserRolesEnum userRole = UserRolesEnum.ANONYMOUS)
-    {
-        this.name = name;
-        this.password = encryptPassword(password);
-        this.email = email;
-        this.userRole = userRole;
-        this.expires = DateTime.Now.AddMonths(1);
-    }
 
     public string Password
     {
@@ -28,7 +19,7 @@ public class User
         set { password = encryptPassword(value); }
     }
     
-    public int Id { get => id; set => id = value; }
+    public virtual int Id { get => id; set => id = value; }
     public string Name { get { return name; } set { name = value; } }
     public UserRolesEnum UserRole { get { return userRole; } set { userRole = value; } }
     public string Email { get { return email; } set { email = value; } }

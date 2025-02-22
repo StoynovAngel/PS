@@ -1,4 +1,6 @@
-﻿using Welcome.Model;
+﻿using DataLayer.Database;
+using DataLayer.Model;
+using Welcome.Model;
 using Welcome.Others;
 using WelcomeExtended.Loggers;
 
@@ -85,6 +87,75 @@ public class UserData
         user.UserRole = role;
     }
 
+    public void displayAllUsers()
+    {
+        using (var context = new DatabaseContext())
+        {
+            var users = context.Users.ToList();
+            foreach (var user in users)
+            {
+                Console.WriteLine($"{user.Name} | Role: {user.UserRole} | Email: {user.Email}");
+            }
+        }
+    }
+    
+    public void deleteUser()
+    {
+        using (var context = new DatabaseContext())
+        {
+            Console.Write("Enter username to delete: ");
+            string name = Console.ReadLine();
+
+            var user = context.Users.FirstOrDefault(u => u.Name.Equals(name));
+            if (user == null)
+            {
+                Console.WriteLine($"User '{name}' not found.");
+                return;
+            }
+
+            context.Users.Remove(user);
+            context.SaveChanges();
+            Logger.LogToFile($"User {name} deleted.");
+        }
+    }
+
+    public void addUser()
+    {
+        using (var context = new DatabaseContext())
+        {
+            DatabaseUser newUser = userForm();
+            if (context.Users.Contains(newUser))
+            {
+                throw new ArgumentException("This user already exists");
+            }
+            context.Users.Add(newUser);
+            context.SaveChanges();
+            Logger.LogToFile($"User added {newUser}");
+        }
+    }
+
+    private DatabaseUser userForm()
+    {
+        Console.Write("Name: ");
+        string name = Console.ReadLine();
+        
+        Console.Write("Password: ");
+        string password = Console.ReadLine();
+        
+        Console.Write("Enter email: ");
+        string email = Console.ReadLine();
+
+        return new DatabaseUser()
+        {
+            Name = name,
+            Password = password,
+            Email = email,
+            Expires = DateTime.Now.AddMonths(1),
+            UserRole = UserRolesEnum.STUDENT
+        };
+    }
+    
+
     private User GetUserByName(string name)
     {
         var user = _users.FirstOrDefault(u => u.Name == name);
@@ -95,4 +166,5 @@ public class UserData
     {
         if (user == null) throw new ArgumentException("User with such name does not exists: " + user);
     }
+    
 }
