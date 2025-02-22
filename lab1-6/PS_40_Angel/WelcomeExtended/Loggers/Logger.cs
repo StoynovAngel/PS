@@ -6,8 +6,6 @@ public static class Logger
 {
     private static readonly string FILE_PATH_ERRORS = Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "Logs", "log.txt");
     private static readonly string FILE_PATH_ACTIVITY = Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "Logs", "log_activity.txt");
-
-    
     
     public static void LogToFile(string message)
     {

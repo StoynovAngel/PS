@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WelcomeExtended", "WelcomeE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLayer", "DataLayer\DataLayer.csproj", "{C2A06C6B-A7A2-4226-8BA2-10AD02BA511C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI-Project", "UI-Project\UI-Project.csproj", "{C083C444-C0B2-4AD4-B555-1A5C75958002}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,6 +26,10 @@ Global
 		{C2A06C6B-A7A2-4226-8BA2-10AD02BA511C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C2A06C6B-A7A2-4226-8BA2-10AD02BA511C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C2A06C6B-A7A2-4226-8BA2-10AD02BA511C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C083C444-C0B2-4AD4-B555-1A5C75958002}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C083C444-C0B2-4AD4-B555-1A5C75958002}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C083C444-C0B2-4AD4-B555-1A5C75958002}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C083C444-C0B2-4AD4-B555-1A5C75958002}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
