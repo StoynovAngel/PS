@@ -20,6 +20,21 @@
         <XamlRuntime>Wpf</XamlRuntime>
         <SubType>Designer</SubType>
       </Page>
+      <Page Update="View\Windows\LoggerWindow.xaml">
+        <Generator>MSBuild:Compile</Generator>
+      </Page>
+      <Page Update="View\Windows\MainWindow.xaml">
+        <Generator>MSBuild:Compile</Generator>
+      </Page>
+      <Page Update="View\Componets\StudentsList.xaml">
+        <Generator>MSBuild:Compile</Generator>
+      </Page>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Componets\" />
+      <Folder Include="Model\" />
+      <Folder Include="View\" />
     </ItemGroup>
 
 </Project>

@@ -15,12 +15,14 @@ public class User
 
     public string Password
     {
-        get {return decryptPassword();}
+        get { return password;}
         set { password = encryptPassword(value); }
     }
     
     public virtual int Id { get => id; set => id = value; }
-    public string Name { get { return name; } set { name = value; } }
+    public string Name { get => name;
+        set => name = value;
+    }
     public UserRolesEnum UserRole { get { return userRole; } set { userRole = value; } }
     public string Email { get { return email; } set { email = value; } }
     
@@ -28,7 +30,7 @@ public class User
     
     public override string ToString()
     {
-        return $"User: {Name}, Password: {Password}, Role: {UserRole}, Email: {Email}";
+        return $"User: {Name}, Encrypted Password: {Password}, Role: {UserRole}, Email: {Email}";
     }
 
     private string encryptPassword(string password)
@@ -42,7 +44,7 @@ public class User
         return new string(chars);
     }
 
-    private string decryptPassword()
+    public string decryptPassword()
     {
         char[] chars = password.ToCharArray();
         for (int i = 0; i < chars.Length; i++)

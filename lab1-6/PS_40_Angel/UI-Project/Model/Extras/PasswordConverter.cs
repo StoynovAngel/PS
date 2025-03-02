@@ -1,7 +1,7 @@
 ﻿using System.Globalization;
 using System.Windows.Data;
 
-namespace UI_Project.Extras;
+namespace UI_Project.Model.Extras;
 
 public class PasswordConverter : IValueConverter
 {

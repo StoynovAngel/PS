@@ -36,17 +36,17 @@ public class UserViewModel
         set { user.Password = value; }
     }
     
-    public User GetUserDetailsByRole(string roleInput)
+    public User GetUserDetailsByRole(String role)
     {
-        if (!userRoleCheck(roleInput))
+        if (!CheckIfUserRoleIsCorrect(role))
         {
-            throw new ArgumentException("No such user found.");
+            throw new ArgumentException("The role does not match any of the enum");
         }
         return user;
     }
-    
-    private bool userRoleCheck(String roleInput)
+
+    private bool CheckIfUserRoleIsCorrect(String role)
     {
-        return roleInput.Equals(user.UserRole.ToString().ToLower());
+        return Enum.IsDefined(typeof(UserRolesEnum), role.ToUpper());
     }
 }

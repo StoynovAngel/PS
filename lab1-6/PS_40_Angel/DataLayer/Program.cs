@@ -6,17 +6,17 @@ using Welcome.Others;
 
 using (var context = new DatabaseContext())
 {
-    // context.Database.EnsureCreated();
-    // context.Add<DatabaseUser>(new DatabaseUser()
-    // {
-    //     Name = "user",
-    //     Password = "password",
-    //     Email = "email",
-    //     Expires = DateTime.Now,
-    //     UserRole = UserRolesEnum.STUDENT
-    // });
-    // context.SaveChanges();
-    // Console.ReadKey();
+    context.Database.EnsureCreated();
+    context.Add<DatabaseUser>(new DatabaseUser()
+    {
+        Name = "user",
+        Password = "password",
+        Email = "email",
+        Expires = DateTime.Now,
+        UserRole = UserRolesEnum.STUDENT
+    });
+    context.SaveChanges();
+    Console.ReadKey();
     var users = context.Users.ToList();
 
     foreach (var user in users)

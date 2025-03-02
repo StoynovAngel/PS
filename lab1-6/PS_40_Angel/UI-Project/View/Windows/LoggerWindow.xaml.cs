@@ -2,7 +2,7 @@
 using System.Windows.Input;
 using Microsoft.Extensions.Logging;
 
-namespace UI_Project.Windows;
+namespace UI_Project.View.Windows;
 
 public partial class LoggerWindow : Window
 {
