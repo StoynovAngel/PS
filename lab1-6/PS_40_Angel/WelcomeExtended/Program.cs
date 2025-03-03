@@ -14,12 +14,15 @@ class Program
 {
     static void Main(string[] args)
     {
-        Menu.DisplayMenu();
+        // Menu.DisplayMenu();
         {
             try
             {
                 Console.WriteLine(test(3, 0));
-                User user = new User();
+                User user = new User
+                {
+                    Name = "Angel Stoynov", Password ="testova2323", Email ="testova@gmail.com"
+                };
                 var viewModel = new UserViewModel(user);
                 var view = new UserView(viewModel);
                 view.DisplayForm();
