@@ -25,3 +25,4 @@
 02/21/2025 15:49:55: ❌ No such user found: 1
 02/22/2025 11:40:54: User added User: Asen, Password: 123, Role: STUDENT, Email: asen@abv.bg
 02/22/2025 11:43:58: User Asen deleted.
+03/04/2025 00:02:27: Exception occured in the user form.

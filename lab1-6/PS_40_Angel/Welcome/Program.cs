@@ -16,7 +16,7 @@ class Program
             Name = "Angel",
             Password = "jsdfjsdfh",
         };
-        Console.WriteLine(user.ToString());
+        Console.WriteLine("Decrypted Password: " + user.decryptPassword());
         UserViewModel userViewModel = new UserViewModel(user);
         UserView userView = new UserView(userViewModel);
         userView.DisplayUserByRole("student");
